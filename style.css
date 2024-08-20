@@ -1,0 +1,248 @@
+body {
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    color: white;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.nav-link {
+    color: white;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link.active,
+.nav-link:active,
+.nav-link:focus,
+.nav-link:visited {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #ccc !important;
+}
+
+/* General animation for section */
+.project1 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.project1.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Image zoom on hover */
+img {
+    transition: transform 0.3s ease;
+}
+
+#projects:hover {
+    transform: scale(1.05);
+}
+
+/* Text slide-in effect */
+h1 {
+    animation: slideIn 0.6s ease forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.lead {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.certificates {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px;
+    animation: fadeIn 1s ease-in;
+}
+
+.certificate {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.certificate img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    transition: opacity 0.3s ease;
+}
+
+.certificate:hover img {
+    opacity: 0.9;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Contact Me */
+.contacts {
+    padding: 30px 60px;
+}
+
+.CMrow {
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contact-left p i {
+    color: white;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #f8f4f4;
+    display: inline-block;
+    transition: transform 0.5s, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0d6efd;
+    transform: translateY(-5px);
+}
+
+.btnr {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #0d6efd;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.btnr:hover {
+    background: #0d6efd;
+}
+
+.btnr.btnr2 {
+    display: inline-block;
+    background: #0d6efd;
+}
+
+.contact-right form {
+    width: 70%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: rgb(240, 238, 238);
+    padding: 15px;
+    margin: 15px 0;
+    color: black;
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+form .btnr2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#msg {
+    color: white;
+    margin-top: -40px;
+    display: block;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+}
